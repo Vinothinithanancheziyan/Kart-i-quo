@@ -43,153 +43,47 @@
 ### *📅 Fixed Expenses & EMIs*
 - Add, edit, and check off fixed monthly expenses (like rent, subscriptions, EMIs).
 - Timeline tracking for EMIs/loans with progress bars and upcoming deadline alerts.
-- Pie chart of fixed spending distribution.
+## kart-i-quo
 
-### *🎯 Goals Management*
-- Create, edit, and track financial goals (big purchase, vacation, etc.).
-- Specify target amount, timeline, monthly contribution.
-- View progress bars and bar charts comparing goal vs. saved amount.
-- Contribution history and forecasts for when you’ll reach your goals.
+Minimal README for the Kart‑i‑quo project. This repository contains a personal finance web app built with Next.js and Firebase.
 
-### *🛡 Emergency Fund*
-- Set a savings target and contribute/withdraw as needed.
-- Track progress and view full transaction history.
-- Recommendations to help you stay financially secure.
+## Features
+- Firebase Authentication (signup/login)
+- Dashboard (overview and basic charts)
+- Daily expense check-in (log expenses)
+- Expenses list & filters
+- Fixed expenses management
+- Goals tracking
+- Emergency fund tracking
+- OCR receipt upload (server API + frontend uploader)
+- Voice input / speech-to-text for logging
+- PDF export of reports
+- AI-driven recommendations (basic integrations)
 
-### *⚡ Smart, Modular UI*
-- Fast navigation via the sidebar and top bar.
-- Customized for dark mode & theming (purple and neutral design).
-- Mobile responsive: Works across devices.
+## Tech
+- Next.js, React, TypeScript
+- Tailwind CSS, shadcn/ui
+- Firebase Auth & Firestore
+- Tesseract.js (OCR), Web Speech API (voice)
 
-### *🧠 AI & Automation*
-- AI-driven recommendations for improving savings and identifying spending leaks.
-- Goal forecasts and alerts about financial behavior.
+## Quick start
+1. Install deps:
 
-### *⚙ Profile & Settings*
-- Edit your profile, update role/income, and manage recurring expenses.
-- "Danger Zone": Secure, confirmed deletion of all user data.
-
-***
-
-## 🛠 Tech Stack
-
-| Tool / Library       | Purpose                                     |
-|----------------------|---------------------------------------------|
-| Next.js              | App framework & routing                     |
-| React & React Hooks  | UI logic, state, and rendering              |
-| TypeScript           | Type safety, robustness                     |
-| Tailwind CSS         | Fast, utility-based responsive styling      |
-| shadcn/ui            | Headless UI primitives and custom components|
-| Firebase Auth        | User authentication & session management    |
-| Firestore           | Cloud data persistence & real-time sync     |
-| Recharts             | Data visualization (charts, graphs)         |
-| date-fns             | Date parsing and formatting                 |
-| react-hook-form      | Declarative, scalable form management       |
-| zod                  | Type-safe form validation                   |
-| lucide-react         | Modern, easily customizable icons           |
-| jsPDF                | Advanced PDF report generation              |
-| jspdf-autotable      | Structured PDF tables and layouts           |
-| Tesseract.js         | OCR processing for receipt scanning         |
-| Web Speech API       | Voice input for expense logging            |
-| Custom hooks/utilities| Centralized business logic, classnames     |
-
-***
-
-## 🗂 Folder Structure
-
-```
-  src/
-    app/             # Next.js pages and routing
-    components/      # Shared UI primitives & custom components
-    hooks/           # Project and utility React hooks
-    lib/             # Firebase, types, utils
-    styles/          # Tailwind config, global CSS
-  public/            # Static assets (logo, images)
-  .env.local         # Environment variables
-```
-***
-
-## ⚡ Getting Started
-
-### *1. Clone and Install*
-bash
-git clone https://github.com/Vino1705/Kart-i-quo.git
-cd Kart-i-quo
+```powershell
 npm install
-# or
-yarn install
-
-
-### *2. Set up Firebase*
-- Go to the [Firebase Console](https://console.firebase.google.com/), create a project, enable Email/Password authentication.
-- Get your project’s config keys (API key, Auth domain, Project ID, App ID).
-
-### *3. Configure Environment Variables*
-Create a .env.local file at the repo root:
-
-```bash
-NEXT_PUBLIC_FIREBASE_API_KEY=your_firebase_api_key
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_firebase_project_id
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
-NEXT_PUBLIC_FIREBASE_APP_ID=your_firebase_app_id
-
-# Google AI Configuration
-GEMINI_API_KEY=your_gemini_api_key
-GOOGLE_PROJECT_ID=your_google_project_id
-GOOGLE_CLOUD_PROJECT=your_google_cloud_project_id
 ```
-### *4. Run the App*
-bash
+
+2. Copy environment variables to `.env.local` (Firebase keys required).
+
+3. Run dev server:
+
+```powershell
 npm run dev
-# or
-yarn dev
+```
 
-View the app at [http://localhost:3000](http://localhost:3000)
+Open http://localhost:3000
 
-***
-
-## 🔒 Security & Best Practices
-
-- All authentication via secure Firebase flows.
-- Environment variables keep secrets out of source.
-- TypeScript with strict schemas for safe, reliable data handling.
-- Profile and expense data is never exposed to unauthorized users.
-
-***
-
-## 👨‍💻 Contributing
-
-1. Fork this repo
-2. Create a branch (git checkout -b amazing-feature)
-3. Commit your changes and push your branch
-4. Open a Pull Request!
-
-***
-
-## 🙋 FAQ
-
-*Is this production ready?*  
-This codebase provides robust, scalable foundations for both hackathons and real deployments. Harden for prod by enabling stricter build rules, more test coverage, persistent backend (e.g., Firestore), and real CI workflows.
-
-*Can I add more AI features?*  
-Yes! Modular hooks & component design make it easy to integrate external AI APIs for more personalized insights.
-
-***
-
-## 🏆 Credits
-
-Made with 💜 by
-- [Vino1705](https://github.com/Vino1705)
-- [Ganesh-0509](https://github.com/Ganesh-0509)
-
-***
-
-## 📣 Thanks for using *FinMate*!
-
-For bugs, ideas, and features—open a GitHub issue or pull request.
-
-***
-
-*Take control of your finances—set goals, log expenses, and start winning with FinMate!*
+## Notes
+- This README is intentionally concise — update it when features change.
+- For detailed setup (Firebase config, API keys), see `src/lib/firebase.ts` and add the required keys to `.env.local`.
+| lucide-react         | Modern, easily customizable icons           |

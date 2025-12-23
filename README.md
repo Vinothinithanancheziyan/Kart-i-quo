@@ -1,8 +1,8 @@
 ***
 
-# 🟪 FinMate
+# 🟪 Kart-i-quo
 
-*FinMate* is a modern, AI-powered personal finance management app built for everyday professionals, students, and families. Track your expenses, set and achieve savings goals, manage recurring costs, and grow your financial confidence—all in a sleek, secure, and intuitive platform.
+*Kart-i-quo* is a modern, AI-powered personal finance management app built for everyday professionals, students, and families. Track your expenses, set and achieve savings goals, manage recurring costs, and grow your financial confidence—all in a sleek, secure, and intuitive platform.
 
 ***
 
@@ -66,14 +66,41 @@ Minimal README for the Kart‑i‑quo project. This repository contains a person
 - Firebase Auth & Firestore
 - Tesseract.js (OCR), Web Speech API (voice)
 
+## Functions (what this app implements)
+- Authentication
+  - Sign up and login using Firebase Authentication
+  - Onboarding flow (set role, income, fixed expenses)
+- Dashboard
+  - Monthly overview, basic charts and spending breakdown
+- Daily check-in
+  - Quick expense logging with category, amount, description
+  - Voice entry (speech-to-text)
+- Expenses
+  - Create / read / update / delete transactions
+  - Filters by day/week/month and category
+- Fixed expenses
+  - Manage recurring/monthly fixed costs and EMIs
+- Goals
+  - Create and track savings goals with progress
+- Emergency fund
+  - Track emergency savings and contributions
+- OCR receipt upload
+  - Server endpoint receives uploaded images and extracts text (Tesseract.js integration)
+- Speech-to-text
+  - Client route for recording audio and converting to text via Web Speech API / server helper
+- Export & reports
+  - PDF export of reports (server-side generation)
+- AI recommendations
+  - Basic AI-driven recommendations and flows (see `src/ai/flows`)
+
 ## Quick start
-1. Install deps:
+1. Install dependencies:
 
 ```powershell
 npm install
 ```
 
-2. Copy environment variables to `.env.local` (Firebase keys required).
+2. Add Firebase keys to `.env.local` (see `src/lib/firebase.ts` for required vars).
 
 3. Run dev server:
 
@@ -84,6 +111,6 @@ npm run dev
 Open http://localhost:3000
 
 ## Notes
-- This README is intentionally concise — update it when features change.
-- For detailed setup (Firebase config, API keys), see `src/lib/firebase.ts` and add the required keys to `.env.local`.
+- Update this README as features evolve.
+- Key implementation locations: `src/app/(auth)`, `src/app/(app)`, `src/ai`, `src/lib/firebase.ts`.
 | lucide-react         | Modern, easily customizable icons           |
